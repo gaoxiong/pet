@@ -14,5 +14,6 @@ public class utils {
         webView.getSettings().setBuiltInZoomControls(false);
         webView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webView.getSettings().setDefaultFontSize(18);
+        webView.getSettings().setPluginState(WebSettings.PluginState.ON);
     }
 }

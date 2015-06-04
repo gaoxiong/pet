@@ -17,7 +17,7 @@ public class TrainingVideosFragment extends PlaceholderFragment
     private View webviewLayout;
     private ViewGroup fullScreenLayout;
     private PetWebViewHelper petWebViewHelper;
-    private String defaultUrl = "http://100.64.20.167";
+    private String defaultUrl = "http://100.64.20.167/trainingvideos/trainingvideos.htm";
 
     public static TrainingVideosFragment newInstance(int sectionNumber) {
         TrainingVideosFragment fragment = new TrainingVideosFragment();
