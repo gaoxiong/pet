@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <com.zhangyu.pet.PetWebView
+    <com.zhangyu.pets.view.PetWebView
         android:id="@+id/wv_training_video_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
