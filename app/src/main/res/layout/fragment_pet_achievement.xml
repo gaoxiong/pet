@@ -14,4 +14,10 @@
         android:layout_height="wrap_content"
         android:text="2"/>
 
+    <WebView
+        android:id="@+id/wv_pet_achievement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"/>
+
 </RelativeLayout>
