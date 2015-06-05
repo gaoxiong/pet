@@ -56,7 +56,7 @@ public class PetTrainingDetailActivityFragment extends BaseFragment
         mWebView = (PetWebView) rootView.findViewById(R.id.detail_training_video_list);
         webviewLayout = rootView.findViewById(R.id.detail_webviewLayout);
         utils.initWebView(mWebView);
-        PetsApplication.getInstance().setWebView(mWebView);
+        PetsApplication.getInstance().addWebView(3, mWebView);
 
         petWebViewHelper = new PetWebViewHelper(this, mWebView, webviewLayout, fullScreenLayout);
         if (!TextUtils.isEmpty(defaultUrl)) {

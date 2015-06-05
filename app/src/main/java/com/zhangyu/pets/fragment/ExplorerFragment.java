@@ -44,7 +44,7 @@ public class ExplorerFragment extends BaseFragment
         mWebView = (PetWebView) rootView.findViewById(R.id.wv_explorer_list);
         webviewLayout = rootView.findViewById(R.id.explorer_webviewLayout);
         utils.initWebView(mWebView);
-        PetsApplication.getInstance().setWebView(mWebView);
+        PetsApplication.getInstance().addWebView(0, mWebView);
 
         petWebViewHelper = new PetWebViewHelper(this, mWebView, webviewLayout, fullScreenLayout);
         if (!TextUtils.isEmpty(defaultUrl)) {

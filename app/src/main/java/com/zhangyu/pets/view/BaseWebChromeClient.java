@@ -54,6 +54,9 @@ public class BaseWebChromeClient extends WebChromeClient {
                 Intent intent = new Intent(context, PetTrainingDetailActivity.class);
                 intent.putExtra(Consts.INTENT_URL, message);
                 delegate.onStartActivity(intent);
+            } else if (message.contains(Consts.PETS_DOMAIN_CAMERA)) {
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                delegate.onStartActivity(intent);
             }
             return true;
         } else {

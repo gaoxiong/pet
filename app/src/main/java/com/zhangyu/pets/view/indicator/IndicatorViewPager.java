@@ -396,7 +396,6 @@ public class IndicatorViewPager {
 		public void notifyDataSetChanged() {
 			indicatorAdapter.notifyDataSetChanged();
 			pagerAdapter.notifyDataSetChanged();
-			;
 		}
 
 		@Override

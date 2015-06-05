@@ -46,7 +46,7 @@ public class TrainingVideosFragment extends BaseFragment
         mWebView = (PetWebView) rootView.findViewById(R.id.wv_training_video_list);
         webviewLayout = rootView.findViewById(R.id.webviewLayout);
         utils.initWebView(mWebView);
-        PetsApplication.getInstance().setWebView(mWebView);
+        PetsApplication.getInstance().addWebView(1, mWebView);
 
         petWebViewHelper = new PetWebViewHelper(this, mWebView, webviewLayout, fullScreenLayout);
         if (!TextUtils.isEmpty(defaultUrl)) {
@@ -55,7 +55,6 @@ public class TrainingVideosFragment extends BaseFragment
         petWebViewHelper.startLoading(mWebView);
         return rootView;
     }
-
 
     @Override
     public void onLoadFinished(WebView view, String url) {

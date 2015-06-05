@@ -44,7 +44,7 @@ public class PetInfoFragment extends BaseFragment
         mWebView = (PetWebView) rootView.findViewById(R.id.wv_info_list);
         webviewLayout = rootView.findViewById(R.id.info_webviewLayout);
         utils.initWebView(mWebView);
-        PetsApplication.getInstance().setWebView(mWebView);
+        PetsApplication.getInstance().addWebView(2, mWebView);
 
         petWebViewHelper = new PetWebViewHelper(this, mWebView, webviewLayout, fullScreenLayout);
         if (!TextUtils.isEmpty(defaultUrl)) {

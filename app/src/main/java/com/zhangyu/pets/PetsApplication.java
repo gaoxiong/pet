@@ -5,13 +5,15 @@ import android.content.Context;
 
 import com.zhangyu.pets.view.PetWebView;
 
+import java.util.HashMap;
+
 /**
  * Created by gaoxiong on 2015/6/5.
  */
 public class PetsApplication extends Application {
 
     private static Context context;
-    private PetWebView mWebView;
+    private HashMap<Integer, PetWebView> mWebViewList = new HashMap<>();
 
     @Override
     public void onCreate() {
@@ -32,11 +34,13 @@ public class PetsApplication extends Application {
         return (PetsApplication) context;
     }
 
-    public void setWebView(PetWebView webView) {
-        this.mWebView = webView;
+    public void addWebView(int sectionNuber, PetWebView webView) {
+        if (mWebViewList.get(sectionNuber) == null) {
+            this.mWebViewList.put(sectionNuber, webView);
+        }
     }
 
-    public PetWebView getWebView() {
-        return this.mWebView;
+    public PetWebView getWebView(int sectionNuber) {
+        return mWebViewList.get(sectionNuber);
     }
 }
